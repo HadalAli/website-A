@@ -3,15 +3,14 @@ window.addEventListener('load', () => {
     Swal.fire({
         title: 'Do you want to play music in the background?',
         icon: 'warning',
+        showCancelButton: true,
         confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
         confirmButtonText: 'Yes',
-        showCancelButton: false, // Hanya satu tombol
-        allowOutsideClick: false // Opsional: agar tidak bisa klik di luar untuk menutup
-    }).then((result) => {
-        if (result.isConfirmed) {
-            document.querySelector('.song').play();
-            animationTimeline();
-        }
+        cancelButtonText: 'Yes',
+    }).then(() => {
+        document.querySelector('.song').play();
+        animationTimeline();
     });
 });
 
