@@ -1,3 +1,22 @@
+// trigger to play music in the background with sweetalert
+window.addEventListener('load', () => {
+    Swal.fire({
+        title: 'Do you want to play music in the background?',
+        icon: 'warning',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'Yes',
+        showCancelButton: false, // Hanya satu tombol
+        allowOutsideClick: false // Opsional: agar tidak bisa klik di luar untuk menutup
+    }).then((result) => {
+        if (result.isConfirmed) {
+            document.querySelector('.song').play();
+            animationTimeline();
+        }
+    });
+});
+
+
+
 // animation timeline
 const animationTimeline = () => {
     // split chars that needs to be animated individually
