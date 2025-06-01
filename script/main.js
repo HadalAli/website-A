@@ -1,12 +1,10 @@
 window.addEventListener("load", () => {
     Swal.fire({
-        title: 'Do you want to play music in the background?',
+        title: 'Apakah Anda ingin memutar musik background?',
         icon: 'warning',
-        showCancelButton: true,
+        showCancelButton: false,  // hilangkan tombol No
         confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
         confirmButtonText: 'Yes',
-        cancelButtonText: 'No',
     }).then((result) => {
         if (result.isConfirmed) {
             const song = document.querySelector('.song');
@@ -15,6 +13,7 @@ window.addEventListener("load", () => {
         animationTimeline();
     });
 });
+
 
 const animationTimeline = () => {
     const textBox = document.querySelector(".hbd-chatbox");
