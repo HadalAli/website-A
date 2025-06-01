@@ -15,6 +15,7 @@ window.addEventListener("load", () => {
 });
 
 
+
 const animationTimeline = () => {
     const textBox = document.querySelector(".hbd-chatbox");
     const hbd = document.querySelector(".wish-hbd");
